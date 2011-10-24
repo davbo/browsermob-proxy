@@ -529,11 +529,6 @@ public class BrowserMobHttpClient {
 
         StatusLine statusLine = null;
         try {
-            // set the User-Agent if it's not already set
-            if (method.getHeaders("User-Agent").length == 0) {
-                method.addHeader("User-Agent", "BrowserMob VU/1.0");
-            }
-
             // was the request mocked out?
             if (mockResponseCode != -1) {
                 statusCode = mockResponseCode;
